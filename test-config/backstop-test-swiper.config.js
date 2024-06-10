@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   "id": "drink2go swiper",
   "viewports": [
     {

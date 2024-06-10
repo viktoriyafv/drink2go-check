@@ -19,7 +19,7 @@
  */
 
 const indexSections = ['header', 'main', 'hero', 'features', 'catalog', 'map', 'footer'];
-module.exports = {
+export default {
   "id": "drink2go test-04",
   "viewports": [
     {

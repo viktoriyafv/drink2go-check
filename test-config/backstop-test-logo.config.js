@@ -1,5 +1,5 @@
 
-module.exports = {
+export default {
   "id": "drink2go Logo",
   "viewports": [
     {

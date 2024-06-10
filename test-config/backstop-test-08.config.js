@@ -11,7 +11,7 @@ const indexSections = [
   { section: 'footer' }
 ];
 
-module.exports = {
+export default {
   "id": "drink2go test-08",
   "viewports": [{
     "label": "desktop",

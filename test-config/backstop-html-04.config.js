@@ -3,7 +3,7 @@
 * todo прокликать контролы формы
 * */
 
-module.exports = {
+export default {
   "id": "drink2go form",
   "viewports": [
     {

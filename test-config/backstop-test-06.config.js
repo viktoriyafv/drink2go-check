@@ -7,7 +7,7 @@ const indexSections = [
   { section: 'footer', misMatchThreshold: 3 }
 ];
 
-module.exports = {
+export default {
   "id": "drink2go test-06",
   "viewports": [
     {
@@ -26,7 +26,7 @@ module.exports = {
       "height": 800,
     },
   ],
-  "onReadyScript": "onReady.js",
+  "onReadyScript": "onReady.cjs",
   "resembleOutputOptions": {
     "ignoreAntialiasing": true,
     "errorType": "movementDifferenceIntensity",

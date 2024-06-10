@@ -20,7 +20,7 @@ const indexSections = [
   ] }
 ].flatMap(item => item.content.map(content => ({ ...item, content })));
 
-module.exports = {
+export default {
   "id": "drink2go test-07",
   "viewports": [
     {

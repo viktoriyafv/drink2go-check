@@ -1,6 +1,6 @@
 const indexSections = ['header', 'main', 'hero', 'features', 'catalog', 'map', 'footer'];
 
-module.exports = {
+export default {
   "id": "drink2go FF",
   "viewports": [
     {
