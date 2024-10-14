@@ -23,7 +23,7 @@
     "lint:html": "linthtml source/**/*.html --config .linthtmlrc",
     "lint:bem": "gulp lintBem --silent",
     "lint:styles": "stylelint \"source/styles/**/*.scss\"",
-    "lint:scripts": "eslint . --ignore-path .gitignore",
+    "lint:scripts": "eslint . --ignore-path .gitignore --ignore-path .eslintingore",
     "optimize": "npm-run-all -p optimize:**",
     "optimize:raster": "gulp optimizeRaster",
     "optimize:vector": "gulp optimizeVector",
