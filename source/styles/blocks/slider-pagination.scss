@@ -1,0 +1,26 @@
+.slider-pagination__button {
+  width: 62px;
+  height: 4px;
+  border: none;
+  border-radius: 0;
+  background-color: $white-color;
+
+  &--current {
+    background-color: $primary-color;
+  }
+
+  &:active {
+    background-color: $primary-dark-color;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: $primary-opasity-color;
+    color: $white-color;
+  }
+
+  &--disabled {
+    background-color: $basic-grey;
+    cursor: not-allowed;
+  }
+}

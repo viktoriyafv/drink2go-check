@@ -1,0 +1,124 @@
+.main-footer__big-container {
+  @media (min-width: $desktop-width) {
+    @include flex-between;
+    padding: 40px;
+    padding-bottom: 20px;
+    align-items: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: start;
+    padding-bottom: 11px;
+    padding-top: 38px;
+  }
+}
+
+.main-footer__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: 1px solid $secondary-color;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 20px 30px;
+    border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 316px;
+    align-items: stretch;
+    padding: 0;
+    margin-right: 30px;
+  }
+}
+
+.main-footer__wrapper {
+  @include flex-between;
+  width: 320px;
+  padding: 20px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 0;
+    align-items: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+  }
+}
+
+.main-footer__nav {
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20px;
+  }
+}
+
+.main-footer__logo {
+  margin-right: 38px;
+  width: 82px;
+  height: 36px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 170px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.main-footer__picture {
+  width: 82px;
+  height: 36px;
+
+  @media (min-width: $tablet-width) {
+    width: 170px;
+  }
+}
+
+.main-footer__logo-text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    width: 318px;
+    font-family: $primary-font;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: start;
+    color: $basic-black;
+    margin-top: 5px;
+  }
+}
+
+.main-footer__developed {
+  @include flex-between;
+  width: 206px;
+  margin: 0 auto;
+  padding: 20px 0 30px;
+  font-family: $primary-font;
+  font-size: 12px;
+  line-height: 16px;
+  color: $basic-grey;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    padding-bottom: 40px;
+  }
+}

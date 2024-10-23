@@ -1,0 +1,180 @@
+.filter__list {
+  @include reset;
+}
+
+.filter__item {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+  display: block;
+  padding-left: 36px;
+  cursor: pointer;
+  margin-bottom: 20px;
+
+  &--country {
+    padding-left: 52px;
+  }
+
+  &:last-child {
+    margin-bottom: 30px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.filter__label-milk {
+  &--disabled {
+    color: $light-grey;
+  }
+}
+
+.filter__label:focus-within .filter__mark-milk,
+.filter__label:hover .filter__mark-milk {
+  border: 2px solid $primary-color;
+  outline: none;
+
+  &::before {
+    background-color: $primary-opasity-color;
+  }
+}
+
+.filter__mark-milk {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid $basic-grey;
+  border-radius: 50%;
+  background-color: $white-color;
+
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    margin: auto;
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    border: 2px solid $primary-light-color;
+    outline: none;
+
+    &::before {
+      background-color: $primary-opasity-color;
+    }
+  }
+}
+
+.filter__input-milk[type="radio"]:checked+.filter__mark-milk {
+  border: 2px solid $primary-color;
+}
+
+.filter__input-milk[type="radio"]:checked+.filter__mark-milk::before {
+  background-color: $primary-color;
+}
+
+.filter__input-milk[type="radio"]:disabled+.filter__mark-milk {
+  border: 2px solid $light-grey;
+}
+
+.filter__mark-country {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 42px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: $basic-grey;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 2;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    background-color: $white-color;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  &:focus,
+  &:focus-visible,
+  &:hover {
+    background-color: $primary-opasity-color;
+    border: 2px solid $primary-light-color;
+  }
+}
+
+.filter__label-country {
+  &--disabled {
+    color: $light-grey;
+  }
+}
+
+.filter__input-country[type="checkbox"]:checked+.filter__mark-country {
+  background-color: $primary-color;
+}
+
+.filter__input-country[type="checkbox"]:checked+.filter__mark-country::before {
+  left: auto;
+  right: 2;
+}
+
+.filter__input-country[type="checkbox"]:disabled+.filter__mark-country {
+  background-color: $light-grey;
+}
+
+.filter__button-wrapper {
+  @media (min-width: $tablet-width) {
+    @include flex-between;
+    width: 277px;
+    margin: 0 auto;
+    margin-top: 9px;
+    margin-bottom: 41px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+  }
+}
+
+.filter__button {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+  &--reset {
+    background-color: $white-color;
+    color: $primary-color;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 137px;
+    margin: 0;
+
+    &--reset {
+      width: 120px;
+      margin: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 149px;
+  }
+}

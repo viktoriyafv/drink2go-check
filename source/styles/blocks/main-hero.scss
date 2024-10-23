@@ -1,0 +1,9 @@
+.main-hero__slider {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 188px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,79 @@
+.user-list__text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    font-family: $primary-font;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    padding: 32px 20px 32px 44px;
+  }
+}
+
+.user-list__icon {
+  position: relative;
+  color: $basic-black;
+  width: 60px;
+  height: 60px;
+
+  @media (min-width: $tablet-width) {
+    height: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 112px;
+
+    &--union {
+      width: 129px;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: $primary-color;
+
+      &::before {
+        background-color: $primary-color;
+      }
+    }
+
+    &:active {
+      background-color: $secondary-color;
+      color: $primary-color;
+
+      &::before {
+        background-color: $primary-color;
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+    mask-size: 16px 16px;
+    background-color: $basic-black;
+
+    @media (min-width: $tablet-width) {
+      height: 80px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 112px;
+      mask-position: 20px 32px;
+    }
+  }
+
+  &--login::before {
+    mask-image: url("../../icons/user-icon.svg");
+  }
+
+  &--union::before {
+    mask-image: url("../../icons/union-icon.svg");
+  }
+}

@@ -1,0 +1,77 @@
+.social__list {
+  @include reset-list;
+  @include flex-between;
+  width: 160px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 50px;
+  }
+}
+
+.social__item {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.social__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+    mask-size: 20px 20px;
+    background-color: $basic-grey;
+  }
+
+  &--vk::before {
+    mask-image: url("../../icons/vk-icon.svg");
+  }
+
+  &--pin::before {
+    mask-image: url("../../icons/pinterest-icon.svg");
+  }
+
+  &--ok::before {
+    mask-image: url("../../icons/ok-icon.svg");
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    background-color: $secondary-color;
+    outline: none;
+
+    &::before {
+      background-color: $primary-color;
+    }
+  }
+
+  &:active {
+    background-color: $primary-opasity-color;
+    outline: none;
+
+    &::before {
+      background-color: $primary-color;
+    }
+  }
+}
+
+.social__link-image {
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+
+  &--pint {
+    padding: 9px;
+  }
+}

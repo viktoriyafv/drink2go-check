@@ -1,0 +1,117 @@
+.main-content__title {
+  @include reset;
+  font-family: $primary-font;
+  text-align: center;
+  font-size: 24px;
+  line-height: 36px;
+  color: $basic-black;
+  margin-bottom: 36px;
+
+  &--catalog {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+    margin-bottom: 60px;
+
+    &--catalog {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
+
+    &--catalog {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.main-content__badge {
+  display: block;
+  width: 118px;
+  margin: 0 auto;
+  margin-bottom: 4px;
+}
+
+.main-content__list {
+  @include reset-list;
+  display: grid;
+  gap: 32px;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 339px);
+    gap: 50px 30px;
+    padding-left: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px 30px;
+    padding-left: 0;
+  }
+}
+
+.main-content__features {
+  width: 320px;
+  padding: 50px 20px 60px;
+  font-family: $primary-font;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 60px 20px 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 100px 40px 120px;
+  }
+}
+
+.main-content__catalog {
+  background-color: $bacground-light-grey;
+  padding-top: 50px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+  }
+}
+
+.main-content__wrapper {
+  width: 320px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include flex-between;
+    width: 1440px;
+    padding: 0 40px;
+    align-items: start;
+  }
+}
+
+.main-content__form {
+  @media (min-width: $tablet-width) {
+    @include flex;
+    align-items: start;
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    gap: 0;
+  }
+}

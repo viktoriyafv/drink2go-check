@@ -1,0 +1,46 @@
+.developed__text {
+  @include reset;
+}
+
+.developed__link {
+  display: block;
+  width: 112px;
+  color: $basic-grey;
+  position: relative;
+  text-align: start;
+
+  &::before {
+    content: "";
+    display: block;
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 16px;
+    position: absolute;
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+    mask-size: 12px 16px;
+    background-color: $basic-grey;
+    mask-image: url("../../icons/html-academy-logo.svg");
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    color: $primary-color;
+
+    &::before {
+      background-color: $primary-color;
+    }
+  }
+
+  &:active {
+    outline: none;
+    color: $primary-dark-color;
+
+    &::before {
+      background-color: $primary-dark-color;
+    }
+  }
+}

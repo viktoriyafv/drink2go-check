@@ -1,0 +1,100 @@
+.range__scale {
+  width: 100%;
+  height: 2px;
+  position: relative;
+  background-color: $light-grey;
+}
+
+.range__bar {
+  position: absolute;
+  width: 226px;
+  left: 1;
+  height: 4px;
+  background-color: $primary-light-color;
+}
+
+.range__wrapper {
+  @include flex-between;
+  position: relative;
+  width: 280px;
+  margin-top: 36px;
+  margin-bottom: 30px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    margin: auto;
+    width: 10px;
+    height: 2px;
+    background-color: $basic-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+    margin-top: 31px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+    margin-top: 34px;
+    margin-bottom: 0;
+  }
+}
+
+.range__filter--min {
+  margin-right: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 50px;
+  }
+}
+
+.range__field {
+  display: block;
+  width: 118px;
+  min-height: 40px;
+  font-family: $primary-font;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  padding: 5px 10px;
+  border: 2px solid hsl(256deg, 76%, 68%);
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline: 0;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+  }
+
+  &::placeholder {
+    color: $basic-grey;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    border-color: $primary-dark-color;
+  }
+
+  &:disabled {
+    border-color: $basic-grey;
+    cursor: not-allowed;
+  }
+}

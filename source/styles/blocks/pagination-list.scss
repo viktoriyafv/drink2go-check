@@ -1,0 +1,122 @@
+.pagination-list__item {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.pagination-list__link {
+  display: block;
+  border: none;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  color: $primary-color;
+  background-color: $white-color;
+  padding: 8px;
+  border-radius: 4px;
+
+  &--current {
+    background-color: transparent;
+    color: $basic-black;
+    font-weight: 600;
+  }
+
+  &--prev {
+    position: relative;
+
+    @media (min-width: $tablet-width) {
+      width: 91px;
+    }
+  }
+
+  &--next {
+    position: relative;
+
+    @media (min-width: $tablet-width) {
+      width: 104px;
+    }
+  }
+
+  &::before {
+    content: "";
+    inset: 0;
+    margin: auto;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    mask-repeat: no-repeat;
+    mask-size: 10px 10px;
+    background-color: $primary-color;
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &--prev::before {
+    display: block;
+    mask-image: url("../../icons/pagination-icon.svg");
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &--next::before {
+    display: block;
+    mask-image: url("../../icons/pagination-icon.svg");
+    transform: rotate(180deg);
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &--disabled {
+    background-color: transparent;
+    color: transparent;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    background-color: $primary-light-color;
+    outline: none;
+    color: $white-color;
+
+    &::before {
+      background-color: $white-color;
+    }
+  }
+
+  &:active {
+    background-color: $primary-dark-color;
+    outline: none;
+    color: $white-color;
+
+    &::before {
+      background-color: $white-color;
+    }
+  }
+
+  &:disabled {
+    background-color: $basic-grey;
+    color: $white-color;
+    cursor: not-allowed;
+
+    &::before {
+      background-color: $white-color;
+    }
+  }
+}
+
+.pagination-list__text {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
