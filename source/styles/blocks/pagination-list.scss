@@ -101,12 +101,12 @@
   }
 
   &:disabled {
-    background-color: $basic-grey;
-    color: $white-color;
+    background-color: transparent;
+    color: transparent;
     cursor: not-allowed;
 
     &::before {
-      background-color: $white-color;
+      background-color: transparent;
     }
   }
 }

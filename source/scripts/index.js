@@ -116,6 +116,8 @@ rangeFieldMax.addEventListener('change', function () {
 
 const paginationsList = document.querySelector('.pagination-list');
 const paginationItem = Array.from(paginationsList.querySelectorAll('.pagination-list__link'));
+const paginationItemPrev = document.querySelector('.pagination-list__link--prev');
+const paginationItemNext = document.querySelector('.pagination-list__link--next');
 
 paginationsList.addEventListener('click', () => {
   const target = event.target;
@@ -123,22 +125,30 @@ paginationsList.addEventListener('click', () => {
   // Проверяем тот ли это элемент который нам нужен
   if (target.classList.contains('pagination-list__link')) {
     for (let i = 0; i < paginationItem.length; i++) {
-
       // Убираем у других
       paginationItem[i].classList.remove('pagination-list__link--current');
 
+      // Добавляем тому на который нажали
+      target.classList.add('pagination-list__link--current');
+
       if (target === paginationItem[paginationItem.length - 2]) {
-        paginationItem[paginationItem.length - 1].classList.add('pagination-list__link--disabled');
+        paginationItem[paginationItem.length - 1].disabled = true;
       } else {
-        paginationItem[paginationItem.length - 1].classList.remove('pagination-list__link--disabled');
+        paginationItem[paginationItem.length - 1].disabled = false;
       }
       if (target === paginationItem[1]) {
-        paginationItem[0].classList.add('pagination-list__link--disabled');
+        paginationItem[0].disabled = true;
       } else {
-        paginationItem[0].classList.remove('pagination-list__link--disabled');
+        paginationItem[0].disabled = false;
       }
     }
-    // Добавляем тому на который нажали
-    target.classList.add('pagination-list__link--current');
   }
+});
+
+paginationItemPrev.addEventListener('click', () => {
+  paginationItem[paginationItem.length - 1].disabled = false;
+});
+
+paginationItemNext.addEventListener('click', () => {
+  paginationItem[0].disabled = false;
 });
